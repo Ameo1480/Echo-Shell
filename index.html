@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoShell · Terminal Legend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 EchoShell · Terminal Legend</h1>
+    <p>Modular · Encrypted · Cinematic · Built for Améo</p>
+    <nav>
+      <a href="#getting-started">Getting Started</a>
+      <a href="#commands">Commands</a>
+      <a href="#apps">Apps Folder</a>
+      <a href="#custom">Add Commands</a>
+      <a href="#examples">Examples</a>
+      <a href="#docs">Documentation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="getting-started">
+      <h2>🎬 Getting Started</h2>
+      <p>Run EchoShell with:</p>
+      <pre><code>python main.py</code></pre>
+      <pre><code>Or double-click the file main.py</code></pre>
+      <p>You’ll see an animated intro, an ASCII logo, and the system ready to receive your commands.</p>
+    </section>
+
+    <section id="commands">
+      <h2>🔥 Core Commands Available</h2>
+      <p>Type <code>help</code> in EchoShell to display all available commands.</p>
+      <p>Custom commands are auto-detected. Use <code>HIDDEN = True</code> to hide them, and <code>DESCRIPTION</code> to describe them in help output.</p>
+      <ul>
+        <li><strong>launch</strong> — Launch files or apps from <code>apps/</code></li>
+        <li><strong>todo</strong> — Manage your task list</li>
+        <li><strong>encrypt / decrypt</strong> — XOR file encryption</li>
+        <li><strong>lock / unlock</strong> — Password-protected encryption</li>
+        <li><strong>ask</strong> — Search the web for answers</li>
+        <li><strong>cls</strong> — Clear screen and reprint boot</li>
+        <li><strong>help</strong> — Show all commands or details</li>
+      </ul>
+    </section>
+
+    <section id="apps">
+      <h2>📁 The <code>apps/</code> Folder</h2>
+      <p>EchoShell uses the <code>apps/</code> folder to launch files or applications.</p>
+      <p>You can place:</p>
+      <ul>
+        <li><code>.exe</code>, <code>.txt</code> files (more formats coming)</li>
+        <li>Folders containing a <code>.exe</code></li>
+      </ul>
+      <pre><code>
+apps/
+├── test.txt
+├── tool.exe
+└── MonApp/
+    └── MonApp.exe
+      </code></pre>
+    </section>
+
+    <section id="custom">
+      <h2>🛠️ Adding a Command</h2>
+      <p>You don’t need to code to use EchoShell. But if you want to create your own commands:</p>
+      <pre><code>
+# commands/my_command.py
+
+DESCRIPTION = "Description of your command."
+HIDDEN = False
+
+def run(args):
+    print("Command executed with:", args)
+      </code></pre>
+      <p>Drop it into <code>commands/</code> and it will be auto-recognized.</p>
+    </section>
+
+    <section id="examples">
+      <h2>🧩 Example Usage</h2>
+      <pre><code>
+EchoShell > todo add "Finish EchoShell"
+EchoShell > todo list
+EchoShell > encrypt "secret.txt"
+EchoShell > decrypt "secret.txt"
+EchoShell > lock "secret.txt"
+EchoShell > unlock "secret.txt"
+EchoShell > launch list
+EchoShell > launch test.txt
+EchoShell > ask "who invented Python"
+EchoShell > cls
+EchoShell > help
+EchoShell > help encrypt
+      </code></pre>
+    </section>
+
+    <section id="docs">
+      <h2>🌐 Full Documentation</h2>
+      <p>A detailed wiki will soon be available at:</p>
+      <p><strong><a href="https://echo-shell.vercel.app" target="_blank">https://echo-shell.vercel.app</a></strong></p>
+      <ul>
+        <li>Tutorials</li>
+        <li>Advanced commands</li>
+        <li>Customization</li>
+        <li>Extensions</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="download-container">
+        <a href="EchoShell.zip" download>⬇️ Download EchoShell</a>
+    </div>
+    <p>© 2025 EchoShell by Améo · All rights dramatically reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
