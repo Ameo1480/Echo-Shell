@@ -86,23 +86,38 @@ footer {
   color: var(--white);
 }
 
-.download-container {
-  margin-bottom: 1rem;
-}
-
-.download-button {
+.download-container a[download] {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: linear-gradient(135deg, var(--blue), var(--accent));
-  color: var(--white);
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
   font-weight: bold;
-  border-radius: 8px;
+  font-size: 1.1rem;
   text-decoration: none;
-  box-shadow: 0 0 10px var(--accent);
-  transition: transform 0.2s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.download-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--accent);
+.download-container a[download]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.download-container a[download]:hover::before {
+  left: 125%;
+}
+
+.download-container a[download]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
