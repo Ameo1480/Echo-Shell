@@ -121,3 +121,21 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
+.download-container a.github-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #24292e;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-container a.github-link:hover {
+  background-color: #2f363d;
+  transform: translateY(-2px);
+}
